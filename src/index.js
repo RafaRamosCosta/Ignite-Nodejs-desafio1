@@ -111,7 +111,7 @@ app.put(
     const alteredTodo = findTodoById(user, id);
 
     alteredTodo.title = title;
-    alteredTodo.deadline = deadline;
+    alteredTodo.deadline = new Date(deadline);
 
     return response.status(200).send(alteredTodo);
   }
